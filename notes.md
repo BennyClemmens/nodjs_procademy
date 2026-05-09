@@ -7,3 +7,40 @@
 - It is not recommended to use it when there is heavy server side processing (e.g. compressing or video manipulation). Use another language like php or python for those use cases.
 - Since it can also be used for front-end, the same technolgy, with many libraries and open source packages and an active community, can be used in the entire stack.
 - It is used in production by many Top companies.
+
+## 02 Installing NODE JS
+
+- Instructions on what (an even version number) and how to install using the [website](https://nodejs.org/en), but I had it allready installed for another course, using winget:
+
+```cmd
+C:\Windows\System32>winget list Node.js
+Name    Id               Version Available Source
+-------------------------------------------------
+Node.js OpenJS.NodeJS.22 22.16.0 22.22.2   winget
+
+C:\Windows\System32>node --version
+v22.16.0
+```
+
+- REPL to use a runtime outside of a browser
+
+```node
+C:\Windows\System32>node
+Welcome to Node.js v22.16.0.
+Type ".help" for more information.
+> 1 + 1
+2
+> .help
+.break    Sometimes you get stuck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL session to a file
+
+Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+> console.log('hello world!')
+hello world!
+undefined
+```
