@@ -44,3 +44,13 @@ Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
 hello world!
 undefined
 ```
+
+## 03 Understanding REPL in Node
+
+- REPL waits for any expression in a prompt
+  - Read: read user input
+  - Eval: evaluate user input
+  - Print: Print or output the result
+  - Loop: Return and wait for new input
+- REPL is not used for development purposes
+- the `_` variable stores the result of the previous expression (expression assignment untill disabled by setting it explicitly)
