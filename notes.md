@@ -54,3 +54,10 @@ undefined
   - Loop: Return and wait for new input
 - REPL is not used for development purposes
 - the `_` variable stores the result of the previous expression (expression assignment untill disabled by setting it explicitly)
+
+## 04 First Node JS Project
+
+- a first app: `app.js`
+- execute with `node app.js`
+- importing the `readline` module for user input
+- creating a user interface and closing it, with callback and close
