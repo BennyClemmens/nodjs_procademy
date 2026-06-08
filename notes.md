@@ -67,3 +67,15 @@ undefined
 - API's available in NODE JS, not in the browser
 - `fs` module to manipulate files
 - `.writeFileSync()` creates or overwrites file
+
+## 06 Asynchronous nature of Node JS
+
+- previous lecture was synchronous: line by line in a single thread
+- blocking the thread when reading very large files
+- solution: use te asynchronous API `readFile()`, which will not be executed in the main thread
+- callback function executes in main when function is ready
+- asynchronous is needed so that multiple users don't block your single thread
+- thus implementing a non-blocking IO Model (with callbacks)
+- callbacks itself don't make it asynchronous (see later)
+- danger: callback hell, with nested callback functions making the code unreadable
+- those can be solved with promises ans anync/await

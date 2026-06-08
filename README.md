@@ -5,3 +5,4 @@
 - [#03 Understanding REPL in Node](https://www.youtube.com/watch?v=8WQwmkOKeZk) [(6'35")](https://www.youtube.com/watch?v=8WQwmkOKeZk&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=3&pp=iAQB)
 - [#04 First Node JS Project](https://www.youtube.com/watch?v=VP55JN3y6uI) [(8'38")](https://www.youtube.com/watch?v=VP55JN3y6uI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=4&pp=iAQB0gcJCQMLAYcqIYzv)
 - [#05 Reading & Writing files synchronously](https://www.youtube.com/watch?v=AwWroso47wc) [(9'36")](https://www.youtube.com/watch?v=AwWroso47wc&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=5&pp=iAQB)
+- [#06 Asynchronous nature of Node JS](https://www.youtube.com/watch?v=p_5aedYq9SI) [(13'38")](https://www.youtube.com/watch?v=p_5aedYq9SI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=6&pp=iAQB)
