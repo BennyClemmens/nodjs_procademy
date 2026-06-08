@@ -61,3 +61,9 @@ undefined
 - execute with `node app.js`
 - importing the `readline` module for user input
 - creating a user interface and closing it, with callback and close
+
+## 05 Reading & Writing files synchronously
+
+- API's available in NODE JS, not in the browser
+- `fs` module to manipulate files
+- `.writeFileSync()` creates or overwrites file
