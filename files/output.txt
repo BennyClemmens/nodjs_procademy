@@ -1,4 +1,6 @@
-data from input.txt: this is line 1
+this is line 1
 this is line 2 from a sample file
 
-Date created: Sat May 16 2026 12:52:22 GMT+0200 (Midden-Europese zomertijd)
+some text on line 1
+
+Date created: Mon Jun 08 2026 12:33:29 GMT+0200 (Midden-Europese zomertijd)

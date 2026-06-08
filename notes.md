@@ -79,3 +79,8 @@ undefined
 - callbacks itself don't make it asynchronous (see later)
 - danger: callback hell, with nested callback functions making the code unreadable
 - those can be solved with promises ans anync/await
+
+## 07 Reading & Writing files asynchronously
+
+- err and data variables in anynchronous callback functions
+- example with callback hell

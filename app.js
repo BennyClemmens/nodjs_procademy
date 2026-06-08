@@ -21,9 +21,26 @@ rli.on('close', () => {
 */
 
 /* code from lecture 5, reading and writing from/to a file using fs */
-
+/*
 let textIn = fs.readFileSync('./files/input.txt', 'utf-8');
 console.log(textIn)
 
 let content = `data from input.txt: ${textIn}\nDate created: ${new Date}`
 fs.writeFileSync('./files/output.txt', `${content}`)
+*/
+
+/* code from lecture 7, reading and writing asynchronously */
+
+fs.readFile('./files/start.txt', 'utf-8', (err, data) => {
+    console.log(data);
+    fs.readFile(`./files/${data}.txt`, 'utf-8', (e, d) => {
+        console.log(d);
+        fs.readFile('./files/append.txt', 'utf-8', (err3, data3) => {
+            console.log(data3);
+            fs.writeFile('./files/output.txt', `${d}\n${data3}\n\nDate created: ${new Date()}`, 'utf-8', (err4) => {
+                console.log('file written');
+            })
+        })
+    })
+})
+console.log('Reading file asynchronously...');
