@@ -84,3 +84,10 @@ undefined
 
 - err and data variables in anynchronous callback functions
 - example with callback hell
+
+## 08 Creating a simple web server
+
+- using the `http`package
+- creating a server that has a callback as argument, executed with every request
+- logging a basic request and response
+- a codepilot patch for favico.ico

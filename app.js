@@ -1,5 +1,13 @@
-const readline = require('readline');
+/* const readline = require('readline'); */
 const fs = require('fs');
+const http = require('http');
+
+let favicon;
+try {
+    favicon = fs.readFileSync('./files/favicon.ico');
+} catch (error) {
+    favicon = null;
+}
 
 /* code from lecture 4, reading and writing to the console using readline
 
@@ -30,7 +38,7 @@ fs.writeFileSync('./files/output.txt', `${content}`)
 */
 
 /* code from lecture 7, reading and writing asynchronously */
-
+/*
 fs.readFile('./files/start.txt', 'utf-8', (err, data) => {
     console.log(data);
     fs.readFile(`./files/${data}.txt`, 'utf-8', (e, d) => {
@@ -44,3 +52,33 @@ fs.readFile('./files/start.txt', 'utf-8', (err, data) => {
     })
 })
 console.log('Reading file asynchronously...');
+*/
+
+/* code from lecture 8, creating a simple web server */
+
+// creating the server
+const server =http.createServer((request, response) => {
+    if (request.url === '/favicon.ico') {
+        if (!favicon) {
+            response.statusCode = 204; // no content, to avoid 404 errors in the console when favicon.ico is not found
+            response.end();
+            return;
+        }
+
+        response.writeHead(200, { 'Content-Type': 'image/x-icon' });
+        response.end(favicon);
+        return;
+    }
+
+    const answer = `new request recieved at ${new Date()}`;
+    console.log(`${request.method} ${request.url}`);
+    response.end(answer);
+    console.log(answer);
+})
+// starting the server
+server.listen(3000, 'localhost', () => {
+    console.log('server is now listening on port 3000');
+    if (!favicon) {
+        console.log('favicon.ico not found in ./files, using 204 placeholder response for /favicon.ico');
+    }
+})
