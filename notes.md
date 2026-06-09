@@ -91,3 +91,9 @@ undefined
 - creating a server that has a callback as argument, executed with every request
 - logging a basic request and response
 - a codepilot patch for favico.ico
+
+## 09 An overview of how web works
+
+- overview ot the client-server architecture
+- aka request-response model
+- the http package (start/header/body)
