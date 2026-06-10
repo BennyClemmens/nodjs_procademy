@@ -58,7 +58,14 @@ console.log('Reading file asynchronously...');
 const template = fs.readFileSync('./template/index.html', 'utf-8');
 // creating the server
 const server =http.createServer((request, response) => {
-    if (request.url === '/favicon.ico') {
+    const answer = `new request recieved at ${new Date()}`;
+    console.log(`${request.method} ${request.url}`);
+    //response.end(template);
+    console.log(answer);
+
+    const path = request.url;
+
+    if (path === '/favicon.ico') {
         if (!favicon) {
             response.statusCode = 204; // no content, to avoid 404 errors in the console when favicon.ico is not found
             response.end();
@@ -68,29 +75,27 @@ const server =http.createServer((request, response) => {
         response.writeHead(200, { 'Content-Type': 'image/x-icon' });
         response.end(favicon);
         return;
-    }
-
-    // serve static files from /styles/
-    if (request.url.startsWith('/styles/')) {
-        const filePath = `./template${request.url}`;
+    } else if (path.startsWith('/styles/')) { // serve static files from /styles/
+        const filePath = `./template${path}`;
         fs.readFile(filePath, 'utf-8', (err, data) => {
             if (err) {
                 response.statusCode = 404;
                 response.end('File not found');
                 return;
             }
-            if (request.url.endsWith('.css')) {
+            if (path.endsWith('.css')) {
                 response.writeHead(200, { 'Content-Type': 'text/css' });
             }
             response.end(data);
         });
-        return;
+        //return;
+    } else if (path === '/' || path.toLowerCase() === '/home') {
+        response.end('homepage');
+    } else {
+        response.statusCode = 404;
+        response.end('Page not found');
     }
 
-    const answer = `new request recieved at ${new Date()}`;
-    console.log(`${request.method} ${request.url}`);
-    response.end(template);
-    console.log(answer);
 })
 // starting the server
 server.listen(3000, 'localhost', () => {

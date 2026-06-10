@@ -112,3 +112,8 @@ undefined
 - routes can also take parameters
 - query strings after a `?`, seperated by `&`
 - routes can extract parameters and query strings from an url
+
+## 12 Creating Routes in Node JS
+
+- extraxting info from the `url` property of the `request` parameter
+- simple routing using the url as a decider
