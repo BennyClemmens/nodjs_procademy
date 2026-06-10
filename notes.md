@@ -94,6 +94,11 @@ undefined
 
 ## 09 An overview of how web works
 
-- overview ot the client-server architecture
+- overview of the client-server architecture
 - aka request-response model
 - the http package (start/header/body)
+
+## 10 How Request & Response works
+
+- more in depth explanation using dev tools
+- added .css (and copilot solution to fetch it)

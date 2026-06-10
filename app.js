@@ -55,7 +55,7 @@ console.log('Reading file asynchronously...');
 */
 
 /* code from lecture 8, creating a simple web server */
-
+const template = fs.readFileSync('./template/index.html', 'utf-8');
 // creating the server
 const server =http.createServer((request, response) => {
     if (request.url === '/favicon.ico') {
@@ -70,9 +70,26 @@ const server =http.createServer((request, response) => {
         return;
     }
 
+    // serve static files from /styles/
+    if (request.url.startsWith('/styles/')) {
+        const filePath = `./template${request.url}`;
+        fs.readFile(filePath, 'utf-8', (err, data) => {
+            if (err) {
+                response.statusCode = 404;
+                response.end('File not found');
+                return;
+            }
+            if (request.url.endsWith('.css')) {
+                response.writeHead(200, { 'Content-Type': 'text/css' });
+            }
+            response.end(data);
+        });
+        return;
+    }
+
     const answer = `new request recieved at ${new Date()}`;
     console.log(`${request.method} ${request.url}`);
-    response.end(answer);
+    response.end(template);
     console.log(answer);
 })
 // starting the server
