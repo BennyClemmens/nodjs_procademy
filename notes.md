@@ -102,3 +102,13 @@ undefined
 
 - more in depth explanation using dev tools
 - added .css (and copilot solution to fetch it)
+
+## 11 What is Routing
+
+- basic explanation of routing for app endpoints
+  - file based
+  - resource based (with a request handler in the back-end)
+- can be implemented with e.g. functions
+- routes can also take parameters
+- query strings after a `?`, seperated by `&`
+- routes can extract parameters and query strings from an url
