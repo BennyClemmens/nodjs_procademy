@@ -56,6 +56,7 @@ console.log('Reading file asynchronously...');
 
 /* code from lecture 8, creating a simple web server */
 const template = fs.readFileSync('./template/index.html', 'utf-8');
+let products = fs.readFileSync('./data/products.json', 'utf-8');
 // creating the server
 const server = http.createServer((request, response) => {
     const answer = `new request recieved at ${new Date()}`;
@@ -75,7 +76,7 @@ const server = http.createServer((request, response) => {
         response.end(favicon);
         return;
     } 
-    if (path === '/' || path.toLowerCase() === '/home') {
+    else if (path === '/' || path.toLowerCase() === '/home') {
         response.writeHead(200, {
             'Content-Type': 'text/html',
             'my-header': 'hello world'
@@ -83,23 +84,27 @@ const server = http.createServer((request, response) => {
         response.end(template.replace('{{%CONTENT%}}', 'home page'));
         return;
     }
-    if (path === '/' || path.toLowerCase() === '/products') {
-        response.writeHead(200);
-        response.end(template.replace('{{%CONTENT%}}', 'products page'));
+    else if (path.toLowerCase() === '/products') {
+        response.writeHead(200,{'Content-Type': 'text/html'});
+        response.end(template.replace('{{%CONTENT%}}', 'you are in products page, see console for now'));
+        console.log(products);
         return;
     }
-    if (path === '/' || path.toLowerCase() === '/contact') {
-        response.writeHead(200);
+    else if (path.toLowerCase() === '/contact') {
+        response.writeHead(200, { 'Content-Type': 'text/html' });
         response.end(template.replace('{{%CONTENT%}}', 'contact page'));
         return;
     }
-    if (path === '/' || path.toLowerCase() === '/about') {
-        response.writeHead(200);
+    else if (path.toLowerCase() === '/about') {
+        response.writeHead(200, { 'Content-Type': 'text/html' });
         response.end(template.replace('{{%CONTENT%}}', 'about page'));
         return;
     }
-    response.statusCode = 404;
-    response.end(template.replace('{{%CONTENT%}}', '404 page not found'));
+    else {
+        response.statusCode = 404;
+        response.writeHead(200, { 'Content-Type': 'text/html' });
+        response.end(template.replace('{{%CONTENT%}}', '404 page not found'));
+    }
 })
 
 // starting the server

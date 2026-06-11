@@ -130,3 +130,9 @@ undefined
 - custom status codes consistent with supported routes
 - `statusCode` or `writeHead()` must come before `end()`
 - headers as a key-value pair object
+
+## 15 Working with JSON data
+
+- add json data
+- fetching it Sync before needed
+- logged to console for now
