@@ -56,7 +56,24 @@ console.log('Reading file asynchronously...');
 
 /* code from lecture 8, creating a simple web server */
 const template = fs.readFileSync('./template/index.html', 'utf-8');
-let products = fs.readFileSync('./data/products.json', 'utf-8');
+let products = JSON.parse(fs.readFileSync('./data/products.json', 'utf-8'));
+let productlistHtml = fs.readFileSync('./template/product-list.html', 'utf-8');
+
+let productHtmlArray = products.map((product) => {
+    let output = productlistHtml.replace('{{%IMAGE%}}', product.productImage);
+    output = output.replace('{{%NAME%}}', product.name);
+    output = output.replace('{{%MODELNAME%}}', product.modeName);
+    output = output.replace('{{%MODELNO%}}', product.modelNumber);
+    output = output.replace('{{%SIZE%}}', product.size);
+    output = output.replace('{{%CAMERA%}}', product.camera);
+    output = output.replace('{{%PRICE%}}', product.price);
+    output = output.replace('{{%COLOR%}}', product.color);
+    output = output.replace('{{%ID%}}', product.id);
+    output = output.replace('{{%ROM%}}', product.ROM);
+    output = output.replace('{{%DESC%}}', product.Description);
+
+    return output
+})
 // creating the server
 const server = http.createServer((request, response) => {
     const answer = `new request recieved at ${new Date()}`;
@@ -86,8 +103,8 @@ const server = http.createServer((request, response) => {
     }
     else if (path.toLowerCase() === '/products') {
         response.writeHead(200,{'Content-Type': 'text/html'});
-        response.end(template.replace('{{%CONTENT%}}', 'you are in products page, see console for now'));
-        console.log(products);
+        response.end(template.replace('{{%CONTENT%}}', productHtmlArray.join('')));
+        console.log(productHtmlArray.join(''));
         return;
     }
     else if (path.toLowerCase() === '/contact') {

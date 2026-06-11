@@ -135,4 +135,11 @@ undefined
 
 - add json data
 - fetching it Sync before needed
+- json parsed to a javascript object
 - logged to console for now
+
+## 16 Transforming JSON data into HTML
+
+- creating a template for an individual product
+- replacing content holders by mapping the product
+- joining the array of html elements togethet and returning it
