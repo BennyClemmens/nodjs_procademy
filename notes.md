@@ -121,4 +121,12 @@ undefined
 ## 13 Sending HTML Response
 
 - use the index.html from repo with css embedded
-- html response for / and /home
+- html response for all
+- `replace` methode for `{{%CONTENT%}}`
+
+## 14 Setting headers for Response
+
+- some response headers are set by default
+- custom status codes consistent with supported routes
+- `statusCode` or `writeHead()` must come before `end()`
+- headers as a key-value pair object

@@ -76,18 +76,25 @@ const server = http.createServer((request, response) => {
         return;
     } 
     if (path === '/' || path.toLowerCase() === '/home') {
+        response.writeHead(200, {
+            'Content-Type': 'text/html',
+            'my-header': 'hello world'
+        });
         response.end(template.replace('{{%CONTENT%}}', 'home page'));
         return;
     }
     if (path === '/' || path.toLowerCase() === '/products') {
+        response.writeHead(200);
         response.end(template.replace('{{%CONTENT%}}', 'products page'));
         return;
     }
     if (path === '/' || path.toLowerCase() === '/contact') {
+        response.writeHead(200);
         response.end(template.replace('{{%CONTENT%}}', 'contact page'));
         return;
     }
     if (path === '/' || path.toLowerCase() === '/about') {
+        response.writeHead(200);
         response.end(template.replace('{{%CONTENT%}}', 'about page'));
         return;
     }
