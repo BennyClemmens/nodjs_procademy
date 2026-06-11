@@ -2,6 +2,7 @@
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
+const replaceHtml = require('./modules/replaceHtml');
 
 let favicon;
 try {
@@ -60,21 +61,6 @@ const template = fs.readFileSync('./template/index.html', 'utf-8');
 let products = JSON.parse(fs.readFileSync('./data/products.json', 'utf-8'));
 let productlistHtml = fs.readFileSync('./template/product-list.html', 'utf-8');
 let productdetailsHtml = fs.readFileSync('./template/product-details.html', 'utf-8');
-
-function replaceHtml(template, product){
-    let output = template.replace('{{%IMAGE%}}', product.productImage);
-    output = output.replace('{{%NAME%}}', product.name);
-    output = output.replace('{{%MODELNAME%}}', product.modeName);
-    output = output.replace('{{%MODELNO%}}', product.modelNumber);
-    output = output.replace('{{%SIZE%}}', product.size);
-    output = output.replace('{{%CAMERA%}}', product.camera);
-    output = output.replace('{{%PRICE%}}', product.price);
-    output = output.replace('{{%COLOR%}}', product.color);
-    output = output.replace('{{%ID%}}', product.id);
-    output = output.replace('{{%ROM%}}', product.ROM);
-    output = output.replace('{{%DESC%}}', product.Description);
-    return output
-}
 
 // creating the server
 const server = http.createServer((request, response) => {

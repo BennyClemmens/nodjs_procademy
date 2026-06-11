@@ -153,3 +153,9 @@ undefined
 
 - replace funtion to adjust multiple html templates
 - details page if a existing query id is present
+
+## 19 Creating a Custom Module
+
+- every .ps script is a module that can be used elsewhere
+- nodeJS provides core modules, which we already used before
+- made a custom module with the resuable function from earlier

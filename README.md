@@ -18,5 +18,6 @@
 - [#16 Transforming JSON data into HTML](https://www.youtube.com/watch?v=M60Q4rW-AJU) [(14'53")](https://www.youtube.com/watch?v=M60Q4rW-AJU&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=16&pp=iAQB)
 - [#17 Parsing Query String from URL](https://www.youtube.com/watch?v=WWjKMnRdEFc) [(11'41")](https://www.youtube.com/watch?v=WWjKMnRdEFc&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=17&pp=iAQB0gcJCToLAYcqIYzv)
 - [#18 Creating a reusable function](https://www.youtube.com/watch?v=erkA7B4BLd8) [(11'02")](https://www.youtube.com/watch?v=erkA7B4BLd8&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=18&pp=iAQB)
+- [#19 Creating a Custom Module](https://www.youtube.com/watch?v=85IxatMJNY4) [(7'02")](https://www.youtube.com/watch?v=85IxatMJNY4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=19&pp=iAQB)
 
 <!-- - []() [('")]() -->
