@@ -143,3 +143,8 @@ undefined
 - creating a template for an individual product
 - replacing content holders by mapping the product
 - joining the array of html elements togethet and returning it
+
+## 17 Parsing Query String from URL
+
+- `url` to parse what user requested
+- using properties from the query string to fetch a specific product

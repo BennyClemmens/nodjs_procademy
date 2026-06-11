@@ -1,6 +1,7 @@
 /* const readline = require('readline'); */
 const fs = require('fs');
 const http = require('http');
+const url = require('url');
 
 let favicon;
 try {
@@ -76,12 +77,12 @@ let productHtmlArray = products.map((product) => {
 })
 // creating the server
 const server = http.createServer((request, response) => {
-    const answer = `new request recieved at ${new Date()}`;
-    console.log(`${request.method} ${request.url}`);
-    //response.end(template);
+    const {query, pathname: path} = url.parse(request.url, true);
+    const answer = `REQ: ${request.method} ${request.url} @ ${new Date().toLocaleString(undefined, {dateStyle: 'short', timeStyle: 'medium'})}`;
     console.log(answer);
+    console.log(query);
 
-    const path = request.url;
+    //const path = request.url;
 
     if (path === '/favicon.ico') {
         if (!favicon) {
@@ -103,8 +104,10 @@ const server = http.createServer((request, response) => {
     }
     else if (path.toLowerCase() === '/products') {
         response.writeHead(200,{'Content-Type': 'text/html'});
+        query.id ?
+        response.end(template.replace('{{%CONTENT%}}', productHtmlArray[query.id])) :
         response.end(template.replace('{{%CONTENT%}}', productHtmlArray.join('')));
-        console.log(productHtmlArray.join(''));
+        //console.log(productHtmlArray.join(''));
         return;
     }
     else if (path.toLowerCase() === '/contact') {
@@ -121,6 +124,7 @@ const server = http.createServer((request, response) => {
         response.statusCode = 404;
         response.writeHead(200, { 'Content-Type': 'text/html' });
         response.end(template.replace('{{%CONTENT%}}', '404 page not found'));
+        return;
     }
 })
 
