@@ -57,7 +57,7 @@ console.log('Reading file asynchronously...');
 /* code from lecture 8, creating a simple web server */
 const template = fs.readFileSync('./template/index.html', 'utf-8');
 // creating the server
-const server =http.createServer((request, response) => {
+const server = http.createServer((request, response) => {
     const answer = `new request recieved at ${new Date()}`;
     console.log(`${request.method} ${request.url}`);
     //response.end(template);
@@ -71,32 +71,30 @@ const server =http.createServer((request, response) => {
             response.end();
             return;
         }
-
         response.writeHead(200, { 'Content-Type': 'image/x-icon' });
         response.end(favicon);
         return;
-    } else if (path.startsWith('/styles/')) { // serve static files from /styles/
-        const filePath = `./template${path}`;
-        fs.readFile(filePath, 'utf-8', (err, data) => {
-            if (err) {
-                response.statusCode = 404;
-                response.end('File not found');
-                return;
-            }
-            if (path.endsWith('.css')) {
-                response.writeHead(200, { 'Content-Type': 'text/css' });
-            }
-            response.end(data);
-        });
-        //return;
-    } else if (path === '/' || path.toLowerCase() === '/home') {
-        response.end('homepage');
-    } else {
-        response.statusCode = 404;
-        response.end('Page not found');
+    } 
+    if (path === '/' || path.toLowerCase() === '/home') {
+        response.end(template.replace('{{%CONTENT%}}', 'home page'));
+        return;
     }
-
+    if (path === '/' || path.toLowerCase() === '/products') {
+        response.end(template.replace('{{%CONTENT%}}', 'products page'));
+        return;
+    }
+    if (path === '/' || path.toLowerCase() === '/contact') {
+        response.end(template.replace('{{%CONTENT%}}', 'contact page'));
+        return;
+    }
+    if (path === '/' || path.toLowerCase() === '/about') {
+        response.end(template.replace('{{%CONTENT%}}', 'about page'));
+        return;
+    }
+    response.statusCode = 404;
+    response.end(template.replace('{{%CONTENT%}}', '404 page not found'));
 })
+
 // starting the server
 server.listen(3000, 'localhost', () => {
     console.log('server is now listening on port 3000');

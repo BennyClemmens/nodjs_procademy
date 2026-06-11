@@ -117,3 +117,8 @@ undefined
 
 - extraxting info from the `url` property of the `request` parameter
 - simple routing using the url as a decider
+
+## 13 Sending HTML Response
+
+- use the index.html from repo with css embedded
+- html response for / and /home
