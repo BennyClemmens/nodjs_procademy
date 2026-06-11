@@ -59,9 +59,10 @@ console.log('Reading file asynchronously...');
 const template = fs.readFileSync('./template/index.html', 'utf-8');
 let products = JSON.parse(fs.readFileSync('./data/products.json', 'utf-8'));
 let productlistHtml = fs.readFileSync('./template/product-list.html', 'utf-8');
+let productdetailsHtml = fs.readFileSync('./template/product-details.html', 'utf-8');
 
-let productHtmlArray = products.map((product) => {
-    let output = productlistHtml.replace('{{%IMAGE%}}', product.productImage);
+function replaceHtml(template, product){
+    let output = template.replace('{{%IMAGE%}}', product.productImage);
     output = output.replace('{{%NAME%}}', product.name);
     output = output.replace('{{%MODELNAME%}}', product.modeName);
     output = output.replace('{{%MODELNO%}}', product.modelNumber);
@@ -72,9 +73,9 @@ let productHtmlArray = products.map((product) => {
     output = output.replace('{{%ID%}}', product.id);
     output = output.replace('{{%ROM%}}', product.ROM);
     output = output.replace('{{%DESC%}}', product.Description);
-
     return output
-})
+}
+
 // creating the server
 const server = http.createServer((request, response) => {
     const {query, pathname: path} = url.parse(request.url, true);
@@ -103,11 +104,23 @@ const server = http.createServer((request, response) => {
         return;
     }
     else if (path.toLowerCase() === '/products') {
+        let productHtmlArray = products.map((product) => {
+            return replaceHtml(productlistHtml, product);
+        })
         response.writeHead(200,{'Content-Type': 'text/html'});
-        query.id ?
-        response.end(template.replace('{{%CONTENT%}}', productHtmlArray[query.id])) :
+        if (query && query.id !== undefined) {
+            const id = Number(query.id);
+            const product = products.find(p => p.id === id);
+            if (product) {
+                response.end(template.replace('{{%CONTENT%}}', replaceHtml(productdetailsHtml, product)));
+                return;
+            }
+            // product not found
+            response.statusCode = 404;
+            response.end(template.replace('{{%CONTENT%}}', 'Product not found'));
+            return;
+        }
         response.end(template.replace('{{%CONTENT%}}', productHtmlArray.join('')));
-        //console.log(productHtmlArray.join(''));
         return;
     }
     else if (path.toLowerCase() === '/contact') {

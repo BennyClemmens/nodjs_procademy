@@ -148,3 +148,8 @@ undefined
 
 - `url` to parse what user requested
 - using properties from the query string to fetch a specific product
+
+## 18 Creating a reusable function
+
+- replace funtion to adjust multiple html templates
+- details page if a existing query id is present

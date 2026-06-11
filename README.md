@@ -17,5 +17,6 @@
 - [#15 Working with JSON data](https://www.youtube.com/watch?v=4829X9PM2ow) [(11'14")](https://www.youtube.com/watch?v=4829X9PM2ow&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=15&pp=iAQB)
 - [#16 Transforming JSON data into HTML](https://www.youtube.com/watch?v=M60Q4rW-AJU) [(14'53")](https://www.youtube.com/watch?v=M60Q4rW-AJU&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=16&pp=iAQB)
 - [#17 Parsing Query String from URL](https://www.youtube.com/watch?v=WWjKMnRdEFc) [(11'41")](https://www.youtube.com/watch?v=WWjKMnRdEFc&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=17&pp=iAQB0gcJCToLAYcqIYzv)
+- [#18 Creating a reusable function](https://www.youtube.com/watch?v=erkA7B4BLd8) [(11'02")](https://www.youtube.com/watch?v=erkA7B4BLd8&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=18&pp=iAQB)
 
 <!-- - []() [('")]() -->
