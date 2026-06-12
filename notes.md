@@ -198,3 +198,11 @@ undefined
 
 - pipe() on the readstream
 - solves the problem of backpressure, as it will automatically pause the readStream when the response buffer is full and resume it when it's drained
+
+## 25 What is NPM
+
+- Node Package Manager that comes with nodJS
+  - repository
+  - cli
+- `package.json` is the config file for the project
+- `npm init` to create a project
