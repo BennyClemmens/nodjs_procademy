@@ -1,8 +1,13 @@
+// CORE MODULES
 /* const readline = require('readline'); */
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
+const events = require('events');
+
+// CUSTOM MODULES
 const replaceHtml = require('./modules/replaceHtml');
+const user = require('./modules/user');
 
 let favicon;
 try {
@@ -138,3 +143,18 @@ server.listen(3000, 'localhost', () => {
         console.log('favicon.ico not found in ./files, using 204 placeholder response for /favicon.ico');
     }
 })
+
+/* code from lecture 21, implementing the eventEmitter class */
+// let myEmitter = new events.EventEmitter();
+let myEmitter = new user();
+
+myEmitter.on('userCreated', (id, name) => {
+    console.log(`a user ${name} with id ${id} was created`);
+});
+
+myEmitter.on('userCreated', (id, name) => {
+    console.log('send email to user');
+});
+
+myEmitter.emit('userCreated', 1, 'John Doe');
+myEmitter.emit('userCreated', 2, 'Jane Doe');

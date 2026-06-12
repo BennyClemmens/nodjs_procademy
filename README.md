@@ -20,5 +20,6 @@
 - [#18 Creating a reusable function](https://www.youtube.com/watch?v=erkA7B4BLd8) [(11'02")](https://www.youtube.com/watch?v=erkA7B4BLd8&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=18&pp=iAQB)
 - [#19 Creating a Custom Module](https://www.youtube.com/watch?v=85IxatMJNY4) [(7'02")](https://www.youtube.com/watch?v=85IxatMJNY4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=19&pp=iAQB)
 - [#20 Understanding event driven architecture](https://www.youtube.com/watch?v=e7iJNY3YwDg) [(9'06")](https://www.youtube.com/watch?v=e7iJNY3YwDg&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=20&pp=iAQB)
+- [#21 Emitting & Handling Custom Events](https://www.youtube.com/watch?v=u8xAG69fLLI) [(14'27")](https://www.youtube.com/watch?v=u8xAG69fLLI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=21&pp=iAQB)
 
 <!-- - []() [('")]() -->

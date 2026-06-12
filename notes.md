@@ -169,3 +169,11 @@ undefined
 - refactored to event driven components
 - in nodejs, the server inherits from the eventemitter class
 - emitter and listener: the observer pattern
+
+## 21 Emitting & Handling Custom Events
+
+- import `events`
+- emit a custom events
+- one or more listener on that event can be triggered (executed in declaration order)
+- named parameters can be added
+- best practice: custom module
