@@ -19,5 +19,6 @@
 - [#17 Parsing Query String from URL](https://www.youtube.com/watch?v=WWjKMnRdEFc) [(11'41")](https://www.youtube.com/watch?v=WWjKMnRdEFc&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=17&pp=iAQB0gcJCToLAYcqIYzv)
 - [#18 Creating a reusable function](https://www.youtube.com/watch?v=erkA7B4BLd8) [(11'02")](https://www.youtube.com/watch?v=erkA7B4BLd8&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=18&pp=iAQB)
 - [#19 Creating a Custom Module](https://www.youtube.com/watch?v=85IxatMJNY4) [(7'02")](https://www.youtube.com/watch?v=85IxatMJNY4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=19&pp=iAQB)
+- [#20 Understanding event driven architecture](https://www.youtube.com/watch?v=e7iJNY3YwDg) [(9'06")](https://www.youtube.com/watch?v=e7iJNY3YwDg&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=20&pp=iAQB)
 
 <!-- - []() [('")]() -->

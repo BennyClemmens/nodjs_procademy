@@ -159,3 +159,13 @@ undefined
 - every .ps script is a module that can be used elsewhere
 - nodeJS provides core modules, which we already used before
 - made a custom module with the resuable function from earlier
+
+## 20 Understanding event driven architecture
+
+- event driven architecture:
+  - event emitter
+  - event listener
+  - event handler
+- refactored to event driven components
+- in nodejs, the server inherits from the eventemitter class
+- emitter and listener: the observer pattern

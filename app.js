@@ -63,7 +63,9 @@ let productlistHtml = fs.readFileSync('./template/product-list.html', 'utf-8');
 let productdetailsHtml = fs.readFileSync('./template/product-details.html', 'utf-8');
 
 // creating the server
-const server = http.createServer((request, response) => {
+const server = http.createServer();
+
+function requestHandler(request, response) {
     const {query, pathname: path} = url.parse(request.url, true);
     const answer = `REQ: ${request.method} ${request.url} @ ${new Date().toLocaleString(undefined, {dateStyle: 'short', timeStyle: 'medium'})}`;
     console.log(answer);
@@ -125,7 +127,9 @@ const server = http.createServer((request, response) => {
         response.end(template.replace('{{%CONTENT%}}', '404 page not found'));
         return;
     }
-})
+}
+
+server.on('request', requestHandler);
 
 // starting the server
 server.listen(3000, 'localhost', () => {
