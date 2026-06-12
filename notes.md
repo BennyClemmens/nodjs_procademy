@@ -206,3 +206,11 @@ undefined
   - cli
 - `package.json` is the config file for the project
 - `npm init` to create a project
+
+## 26 Types of Packages & installs
+
+- regular vs dev dependencies
+- `npm install x` to install a package
+- add `--save-dev` for dev deps
+- packages can be installed locally or globally (with `-g`)
+- `nodemon` to autp-restart in development

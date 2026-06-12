@@ -157,4 +157,4 @@ myEmitter.on('userCreated', (id, name) => {
 });
 
 myEmitter.emit('userCreated', 1, 'John Doe');
-myEmitter.emit('userCreated', 2, 'Jane Doe');
+myEmitter.emit('userCreated', 2, 'Jane Do');
