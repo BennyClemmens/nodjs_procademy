@@ -188,3 +188,8 @@ undefined
   - duplex (read and write, eg web sockets)
   - transform (duplex with adjustable data eg zlib)
 - streams are instances of event emitter class
+
+## 23 Understanding Streams in practice
+
+- `stream.js`
+- created a readstream to write chuncks to the response stream
