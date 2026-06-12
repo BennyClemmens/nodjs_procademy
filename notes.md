@@ -177,3 +177,14 @@ undefined
 - one or more listener on that event can be triggered (executed in declaration order)
 - named parameters can be added
 - best practice: custom module
+
+## 22 Understanding Streams in NODE JS
+
+- normal reading and writing of a file uses buffers that holds the entire file
+- streams make it possible to work with smaller chuncks of data
+- nodeJS has 4 types of built-in streams, each with own events and methods:
+  - readable (data & end, read & pipe)
+  - writable (drain & finish, write & end)
+  - duplex (read and write, eg web sockets)
+  - transform (duplex with adjustable data eg zlib)
+- streams are instances of event emitter class

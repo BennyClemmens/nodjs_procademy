@@ -21,5 +21,6 @@
 - [#19 Creating a Custom Module](https://www.youtube.com/watch?v=85IxatMJNY4) [(7'02")](https://www.youtube.com/watch?v=85IxatMJNY4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=19&pp=iAQB)
 - [#20 Understanding event driven architecture](https://www.youtube.com/watch?v=e7iJNY3YwDg) [(9'06")](https://www.youtube.com/watch?v=e7iJNY3YwDg&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=20&pp=iAQB)
 - [#21 Emitting & Handling Custom Events](https://www.youtube.com/watch?v=u8xAG69fLLI) [(14'27")](https://www.youtube.com/watch?v=u8xAG69fLLI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=21&pp=iAQB)
+- [#22 Understanding Streams in NODE JS](https://www.youtube.com/watch?v=EFsmGhXuSZ4) [(10'15")](https://www.youtube.com/watch?v=EFsmGhXuSZ4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=22&pp=iAQB)
 
 <!-- - []() [('")]() -->
