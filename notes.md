@@ -193,3 +193,8 @@ undefined
 
 - `stream.js`
 - created a readstream to write chuncks to the response stream
+
+## 24 Understanding pipe method
+
+- pipe() on the readstream
+- solves the problem of backpressure, as it will automatically pause the readStream when the response buffer is full and resume it when it's drained

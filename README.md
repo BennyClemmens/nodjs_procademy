@@ -23,5 +23,6 @@
 - [#21 Emitting & Handling Custom Events](https://www.youtube.com/watch?v=u8xAG69fLLI) [(14'27")](https://www.youtube.com/watch?v=u8xAG69fLLI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=21&pp=iAQB)
 - [#22 Understanding Streams in NODE JS](https://www.youtube.com/watch?v=EFsmGhXuSZ4) [(10'15")](https://www.youtube.com/watch?v=EFsmGhXuSZ4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=22&pp=iAQB)
 - [#23 Understanding Streams in practice](https://www.youtube.com/watch?v=SxCfcE4AHxQ) [(16'25")](https://www.youtube.com/watch?v=SxCfcE4AHxQ&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=23&pp=iAQB)
+- [#24 Understanding pipe method](https://www.youtube.com/watch?v=5Mosdd3jwgU) [(7'38")](https://www.youtube.com/watch?v=5Mosdd3jwgU&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=24&pp=iAQB)
 
 <!-- - []() [('")]() -->

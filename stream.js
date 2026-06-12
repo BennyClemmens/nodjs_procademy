@@ -39,20 +39,21 @@ function requestHandler(request, response) {
         //     return;
         // });
         const readStream = fs.createReadStream('./files/large-file.txt');
-        readStream.on('error', (err) => {
-            response.statusCode = 500;
-            response.end('Error reading file');
-        });
-        
-        readStream.on('data', (chunk) => {
-            response.write(`\n............THIS CHUNK IS PART ${part}...............\n`);
-            part += 1;
-            response.write(chunk);
-        });
-        readStream.on('end', () => {
-            response.write(`\n............THE END...............\n`);
-            response.end();
-        });
+        // readStream.on('error', (err) => {
+        //     response.statusCode = 500;
+        //     response.end('Error reading file');
+        // });
+        // readStream.on('data', (chunk) => {
+        //     response.write(`\n............THIS CHUNK IS PART ${part}...............\n`);
+        //     part += 1;
+        //     response.write(chunk);
+        // });
+        // readStream.on('end', () => {
+        //     response.write(`\n............THE END...............\n`);
+        //     response.end();
+        // });
+
+        readStream.pipe(response);
     }
 }
 
