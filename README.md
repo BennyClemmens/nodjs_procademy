@@ -26,5 +26,6 @@
 - [#24 Understanding pipe method](https://www.youtube.com/watch?v=5Mosdd3jwgU) [(7'38")](https://www.youtube.com/watch?v=5Mosdd3jwgU&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=24&pp=iAQB)
 - [#25 What is NPM](https://www.youtube.com/watch?v=ONHSUC8ADks) [(7'41")](https://www.youtube.com/watch?v=ONHSUC8ADks&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=25&pp=iAQB)
 - [#26 Types of Packages & installs](https://www.youtube.com/watch?v=BV5WVyMWYUw) [(10'44")](https://www.youtube.com/watch?v=BV5WVyMWYUw&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=26&pp=iAQB)
+- [#27 Architecture of NODE JS](https://www.youtube.com/watch?v=59C1dvLRIrI) [(12'25")](https://www.youtube.com/watch?v=59C1dvLRIrI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=27&pp=iAQB)
 
 <!-- - []() [('")]() -->

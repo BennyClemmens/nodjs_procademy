@@ -213,4 +213,18 @@ undefined
 - `npm install x` to install a package
 - add `--save-dev` for dev deps
 - packages can be installed locally or globally (with `-g`)
-- `nodemon` to autp-restart in development
+- `nodemon` to auto-restart in development
+
+## 27 Architecture of NODE JS
+
+- high level:
+  - V8-engine (C++ and JS)
+  - LIBUV (C++): an important dep that handles interaction with OS and architecture, event loop and thread loop
+  - others: http parser, c-ares (dns requests), openssl (cryptography), zlib (compression)
+- `process`: facilitates the execution of a program (what you see running in the task manager)
+- `thread`: responsible for executing a program code in the process, 1 main thread by default
+  - other programming languages have code to creating multiple threads, nodeJS doesn't
+- top level code (without callbacks) is executed in the main thread
+- async code is executed in the background, in the thread pool (by default 4, upt to 1024 possible)
+  - when the background job is finished, the callback function will be pushed to the event loop
+  - callback funtions in the event loop get executed when the main thread is empty (pushed to main thread)
