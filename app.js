@@ -62,6 +62,7 @@ console.log('Reading file asynchronously...');
 */
 
 /* code from lecture 8, creating a simple web server */
+/*
 const template = fs.readFileSync('./template/index.html', 'utf-8');
 let products = JSON.parse(fs.readFileSync('./data/products.json', 'utf-8'));
 let productlistHtml = fs.readFileSync('./template/product-list.html', 'utf-8');
@@ -143,9 +144,11 @@ server.listen(3000, 'localhost', () => {
         console.log('favicon.ico not found in ./files, using 204 placeholder response for /favicon.ico');
     }
 })
+*/
 
 /* code from lecture 21, implementing the eventEmitter class */
 // let myEmitter = new events.EventEmitter();
+/*
 let myEmitter = new user();
 
 myEmitter.on('userCreated', (id, name) => {
@@ -158,3 +161,37 @@ myEmitter.on('userCreated', (id, name) => {
 
 myEmitter.emit('userCreated', 1, 'John Doe');
 myEmitter.emit('userCreated', 2, 'Jane Do');
+*/
+
+/* code from lecture 29, event loop in practice */
+
+console.log('program has started'); // main thread
+
+//stored in 1st phase of event loop, before any I/O events
+setTimeout(() => { // running in the background asynchronously
+    console.log('Timer callback executed');
+}, 0);
+
+//stored in callback queueof second phase (when finished)
+fs.readFile('./files/input.txt', 'utf-8', (err, data) => {
+    console.log('file read complete');
+    setTimeout(() => { // running in the background asynchronously
+        console.log('Timer callback executed within callback of readfile');
+    }, 0);
+
+    setImmediate(() => { // running in the background asynchronously
+        console.log('Immediate callback executed  within callback of readfile');
+    });
+
+    process.nextTick(() => {
+        console.log('nextTick callback executed within callback of readfile');
+    });
+    
+});
+
+//stored in 3rd phase of event loop, but should resolve before the timer recording to documentation
+setImmediate(() => { // running in the background asynchronously
+    console.log('Immediate callback executed');
+});
+
+console.log('program has completed'); // main thread

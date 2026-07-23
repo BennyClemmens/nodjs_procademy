@@ -27,5 +27,6 @@
 - [#25 What is NPM](https://www.youtube.com/watch?v=ONHSUC8ADks) [(7'41")](https://www.youtube.com/watch?v=ONHSUC8ADks&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=25&pp=iAQB)
 - [#26 Types of Packages & installs](https://www.youtube.com/watch?v=BV5WVyMWYUw) [(10'44")](https://www.youtube.com/watch?v=BV5WVyMWYUw&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=26&pp=iAQB)
 - [#27 Architecture of NODE JS](https://www.youtube.com/watch?v=59C1dvLRIrI) [(12'25")](https://www.youtube.com/watch?v=59C1dvLRIrI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=27&pp=iAQB)
-
+- [#28 Event Loop in NODE JS](https://www.youtube.com/watch?v=5F4iO-W0ZbY) [(19'02")](https://www.youtube.com/watch?v=5F4iO-W0ZbY&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=28&pp=iAQB)
+- [#29 NODE JS Event Loop in Practice](https://www.youtube.com/watch?v=jxAXonX9Ao4) [(26'16")](https://www.youtube.com/watch?v=jxAXonX9Ao4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=29&pp=iAQB)
 <!-- - []() [('")]() -->

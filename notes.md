@@ -228,3 +228,29 @@ undefined
 - async code is executed in the background, in the thread pool (by default 4, upt to 1024 possible)
   - when the background job is finished, the callback function will be pushed to the event loop
   - callback funtions in the event loop get executed when the main thread is empty (pushed to main thread)
+
+## 28 Event Loop in NODE JS
+
+- the event loop picks up events and stores the callback functions untill the can be executed by the main thread
+- event loop has some internal phases (4 we discuss now) to handle stuff, with each an own callback queue
+  1. expired timers, eg. setTimer() and setInterval()
+  2. io tasks and polling
+  3. setImmidiate callback
+  4. closed callback
+- these phases are handled in a loop and once passed they will only be processed in the next loop (which last a `tick`)
+- the phases execute all callbacks that are present fifo
+- two more important, independant queues that fire after any phase from the event loop
+  - microtask queue (callbcack attatched to a result promise)
+  - nexttick queue (callback from process.nexttick())
+- loop runs untill no more timer or io-task running
+- the programmer most make sure the event loop does not get blocked
+  - don't use sync versions of functions in fs, crypto and zlib modules
+  - no complex calulations in the callback function
+  - be mindfull of JSON with many JSON-objects
+  - be mindfull of complex regex expressions in callbacks
+
+## 29 NODE JS Event Loop in Practice
+
+- practicale example in apps.js
+- setImmediate should be faster then setTimer 0 bus this can by buggy
+- nexttick to execute right after current phase
