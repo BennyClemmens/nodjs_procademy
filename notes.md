@@ -254,3 +254,12 @@ undefined
 - practicale example in apps.js
 - setImmediate should be faster then setTimer 0 bus this can by buggy
 - nexttick to execute right after current phase
+
+## 30 Introduction to Express JS
+
+- a free and open-source webapp framework for nodeJS
+- less complex code to write for the dev, since functionality is provided by Express JS
+- popular and rubust
+- mvc ready
+- creating with `npm init` and a url-friendly name
+- a simple app.js with a simple get-route (multiple formats)
